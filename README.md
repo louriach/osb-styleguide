@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Pattern Lab Node - Gulp Edition
 
 The Gulp wrapper around [Pattern Lab Node Core](https://github.com/pattern-lab/patternlab-node) providing tasks to interact with the core library and move supporting frontend assets.
@@ -102,6 +101,5 @@ To install a specific StarterKit from GitHub type:
     npm install [starterkit-vendor/starterkit-name]
 
     gulp patternlab:loadstarterkit --kit=[starterkit-name]
-=======
+    
 # osb-styleguide
->>>>>>> 22a6ab70a71f809772feba36947f963f85430d1d
