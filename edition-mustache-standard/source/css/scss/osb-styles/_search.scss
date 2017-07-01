@@ -1,0 +1,121 @@
+.search {
+    background-color: $light-grey;
+}
+
+.search-result--wrapper {
+    overflow: hidden;
+}
+
+.search-result {
+    background-color: $white;
+    border: 1px solid $mid-grey;
+    border-radius: 3px;
+    color: $dark-grey;
+    display: block;
+    float: left;
+    @extend .pb--2;
+    @extend .pt--2;
+    width: 100%;
+    .fa-plane {
+        transform: rotate(45deg);
+        transition: all .3s ease-in-out;
+    }
+    &:hover {
+        background-color: $light-grey;
+        color: $dark-grey;
+        .fa-plane {
+            margin-right: -$base-rem__desktop;
+        }
+        .button {
+            background-color: darken( $green, 10%);
+        }
+    }
+}
+
+.search-result--single {
+    @media all and (min-width: 767px) {
+        padding-top: calc(#{$base-rem__desktop}*1.5);
+    }
+}
+
+.airline-logo {
+    @media all and (max-width: 767px) {
+        margin: $base-rem 0 $base-rem__desktop;
+    }
+    max-height: $base-rem__desktop;
+}
+
+.highlight {
+    background-color: $yellow;
+}
+
+.search-result--price {
+    @media all and (max-width: 768px) {
+        border-top: 1px dashed $mid-grey;
+    }
+    @media all and (min-width: 768px) {
+        border-left: 1px dashed $mid-grey;
+        margin-top: -$base-rem__desktop;
+        margin-bottom: -$base-rem;
+    }
+    margin: $base-rem__desktop 0 0;
+    @extend .pb--2;
+    @extend .pt--2;
+    @media all and (max-width: 767px) {
+        padding-top: $base-rem__desktop;
+    }
+    right: 0;
+    top: 0;
+}
+
+.stub {
+    @extend .absolute;
+    background-color: $light-grey;
+    border: 1px solid $mid-grey;
+    border-radius: 100%;
+    height: $base-rem;
+    top: calc(#{-$base-rem}/2);
+    width: $base-rem;
+    @media all and (min-width: 768px) {
+        height: $base-rem__desktop;
+        top: auto;
+        width: $base-rem__desktop;
+    }
+}
+
+.stub--bottom {
+    right: calc(#{-$base-rem}/2);
+    @media all and (min-width: 768px) {
+        bottom: -$base-rem__desktop;
+        left: -$base-rem;
+    }
+}
+
+.stub--middle {
+    border-style: dashed;
+    left: 50%;
+    margin-left: calc(#{-$base-rem}/2);
+    @media all and (min-width: 768px) {
+        left: calc(#{-$base-rem}/2);
+        margin-top: calc(#{-$base-rem}/2);
+        top: 50%;
+    }
+}
+
+.stub--top {
+    left: calc(#{-$base-rem}/2);
+    @media all and (min-width: 768px) {
+        left: -$base-rem;
+        top: -$base-rem;
+    }
+}
+
+.search-result--currency {
+    @media all and (max-width: 767px) {
+        margin-right: $base-rem;
+    }
+    @media all and (min-width: 768px) {
+        font-size: calc(#{$base-rem__desktop}*1.5);
+        display: block;
+    }
+}
