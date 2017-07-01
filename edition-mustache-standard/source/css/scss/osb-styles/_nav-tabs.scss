@@ -1,0 +1,36 @@
+@import "scrolling-list";
+.nav-tabs {
+    .active {
+        g {
+            stroke: $orange;
+        }
+        .button {
+            border-color: $orange;
+            color: $orange;
+            transition: all ease .3s;
+            &:hover,
+             :focus {
+                background-color: transparent;
+                cursor: default;
+            }
+        }
+        &:hover,
+         :focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.tab-content>.tab-pane {
+    display: none
+}
+
+.tab-content>.active {
+    display: block
+}
+
+.tab-content--bordered {
+    border: 1px solid $mid-grey;
+    border-radius: $base-rem;
+    padding: $base-rem;
+}

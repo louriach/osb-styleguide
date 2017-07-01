@@ -1,0 +1,18 @@
+.scrolling-list {
+    li {
+        @media all and (min-width: 1025px) {
+            margin-bottom: $base-rem__desktop;
+        }
+    }
+    @media all and (max-width: 768px) {
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+    .button {
+        @media all and (max-width: 768px) {
+            display: inline-block;
+            height: auto;
+        }
+    }
+}

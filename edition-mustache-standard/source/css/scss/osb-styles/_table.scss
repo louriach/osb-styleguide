@@ -1,0 +1,13 @@
+.table--padded {
+  th, .th {
+    @extend .bold;
+  }
+  th, .th, tr:nth-child(even), .tr:nth-child(even) {
+      background-color: $light-grey;
+  }
+  th, .th, td, .td {
+    border: 1px solid $mid-grey;
+    padding: 1rem;
+    @extend .small;
+  }
+}

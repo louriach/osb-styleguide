@@ -1,0 +1,30 @@
+$white: #fff;
+$light-grey: #FBFBFB;
+$mid-grey: #CBCBCB;
+$dark-grey: #4B4B4B;
+$blue: #005F9E;
+$orange: #FE6600;
+$green: #00A843;
+$red: #e60016;
+$red-light: #FDE6E8;
+$yellow: #f5e79e;
+$yellow-dark: darken(#f5e79e, 50%);
+
+.text--white {
+  color: $white;
+}
+.text--black {
+  color: $dark-grey;
+}
+
+.background--white {
+  background-color: $white;
+}
+
+.background--dark-grey {
+  background-color: $dark-grey;
+}
+
+.background--blue {
+  background-color: $blue;
+}

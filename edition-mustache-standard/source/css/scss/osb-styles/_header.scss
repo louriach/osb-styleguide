@@ -1,0 +1,165 @@
+.navbar {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  @media all and (max-width: 1023px) {
+    background-color: $white;
+    position: fixed;
+  }
+}
+
+.header--trim {
+  /*background-color: rgba($blue, .75);*/
+  background-color: $blue;
+  padding-top: calc(#{$base-rem__desktop}*5);
+}
+
+.cover {
+  background: url("https://images.unsplash.com/photo-1475503572774-15a45e5d60b9") no-repeat 0 0;
+  background-size: cover;
+  left: 0;
+  position: absolute;
+}
+
+.menu-list {
+  .dropdown-menu {
+    @media only screen and (max-width: 1023px) {
+      display: block;
+      box-shadow: none;
+      position: static;
+      width: 100%;
+    }
+    @media all and (min-width: 1024px) {
+      font-size: .8rem;
+      padding: calc(#{$base-rem}*2);
+    }
+  }
+  .dropdown-toggle {
+    @media only screen and (max-width: 1023px) {
+      &:after {
+        display: none;
+      }
+    }
+  }
+   @media all and (min-width: 1024px) {
+    li {
+      display: inline-block;
+    }
+  }
+}
+
+.nav__item {
+  color: $blue;
+  line-height: calc(#{$base-rem}*4);
+  @media all and (max-width: 1023px) {
+    border-top: 1px solid $mid-grey;
+    display: block;
+    margin-top: $base-rem__desktop;
+    padding-top: $base-rem__desktop;
+  }
+  @media all and (min-width: 1024px) {
+    color: $white;
+    font-size: .8rem;
+    line-height: calc(#{$base-rem__desktop}*4);
+    padding-left: calc(#{$base-rem__desktop}*2);
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+  }
+}
+
+.navbar-brand {
+  background: url("../images/onestepbooking__logo--blue.svg") 0 0 no-repeat transparent;
+  height: 21px;
+  left: $base-rem__desktop;
+  position: absolute;
+  text-indent: -9999px;
+  top: 18px;
+  width: 198px;
+  @media all and (min-width: 1024px) {
+    background-image: url("../images/onestepbooking__logo--white.svg");
+    left: calc(#{$base-rem}*3);
+    top: 25px;
+  }
+}
+
+@media all and (max-width: 1023px) {
+  .navbar-header {
+    height: calc(#{$base-rem__desktop}*3);
+  }
+}
+
+.navbar-collapse {
+  -webkit-overflow-scrolling: touch;
+  @media all and (max-width: 1023px) {
+    background-color: $white;
+  }
+}
+
+@media (min-width: 1024px) {
+  .navbar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+    text-align: right;
+  }
+  .navbar-collapse.in {
+    overflow-y: visible;
+  }
+}
+
+.navbar-toggle {
+  background-color: transparent;
+  position: absolute;
+  right: $base-rem__desktop;
+  top: $base-rem;
+
+  &:after {
+  content: "Close";
+  position: relative;  
+}
+
+&.collapsed {
+  &:after {
+  content: "Menu"; 
+}
+}
+
+  &:focus {
+    background-color: transparent;
+  }
+  @media all and (min-width: 1024px) {
+    display: none !important;
+  }
+}
+
+.navbar-collapse.collapse.in {
+  background-color: $white;
+}
+
+.collapse {
+  display: none
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+  -o-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility
+}
+
+.collapse.in {
+  display: block;
+}
