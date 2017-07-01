@@ -1,0 +1,8 @@
+.collapse--toggle {
+    background: url(../images/onestepbooking__asset--minus.svg) no-repeat 0 0 transparent;
+    &.collapsed {
+        background: url(../images/onestepbooking__asset--plus.svg) no-repeat 0 0 transparent;
+    }
+    padding-left: calc(#{$base-rem}*3);
+    transition: all ease .3s;
+}

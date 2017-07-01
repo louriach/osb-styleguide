@@ -1,0 +1,54 @@
+@import "_nav-tabs";
+.live-search {
+    &:nth-child(odd) {
+        padding-right: $base-rem;
+    }
+    &:nth-child(even) {
+        padding-left: $base-rem;
+    }
+    @media all and (max-width: 515px) {
+        text-align: center;
+    }
+    @media all and (min-width: 515px) {
+        float: left;
+        width: 50%;
+    }
+}
+
+.live-search--data {
+    border: 1px solid $mid-grey;
+    border-radius: $base-rem;
+    box-shadow: none;
+    display: inline-block;
+    margin-bottom: $base-rem;
+    padding: $base-rem 0;
+    @media all and (min-width: 768px) {
+        padding: $base-rem__desktop 0;
+    }
+    transition: all ease .3s;
+    width: 100%;
+    &:nth-child(odd) {
+        padding-left: 0;
+    }
+    &:nth-child(even) {
+        padding-right: 0;
+        @media all and (min-width: 1024px) {
+            border-left: none;
+        }
+    }
+    &:hover {
+        box-shadow: 0 4px 16px $mid-grey;
+        color: $dark-grey;
+        text-decoration: none;
+    }
+    .cta {
+        @media all and (min-width: 1024px) {
+            text-align: right;
+        }
+    }
+}
+.live-search--meta {
+    @media all and (min-width: 1024px) {
+        text-align: right;
+    }
+}
